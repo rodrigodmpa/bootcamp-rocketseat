@@ -40,14 +40,13 @@ describe('AuthenticateUser', () => {
       fakeHashProvider,
     );
 
-    expect(
+    await expect(
       authUser.execute({
         email: 'johndoe@example.com',
         password: '121212',
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
-
   it('should restrict a user with incorrect password', async () => {
     const fakeUsersRepository = new FakeUsersRepository();
     const fakeHashProvider = new FakeHashProvider();
@@ -67,7 +66,7 @@ describe('AuthenticateUser', () => {
       password: '121212',
     });
 
-    expect(
+    await expect(
       authUser.execute({
         email: 'johndoe2@example.com',
         password: '12122',
