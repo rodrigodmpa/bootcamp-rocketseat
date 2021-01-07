@@ -1,3 +1,7 @@
+
+# bootcamp-rocketseat
+Repo for the Rocketseat bootcamp GoStack
+
 # Recuperação de senha
 
 **RF**
