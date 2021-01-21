@@ -3,7 +3,6 @@ import { inject, injectable } from 'tsyringe';
 import { isAfter, addHours } from 'date-fns';
 // import User from '../infra/typeorm/entities/User';
 
-import { compare } from 'bcryptjs';
 import IUsersRepository from '../repositories/IUsersRepository';
 import IUserTokensRepository from '../repositories/IUserTokensRepository';
 import IHashProvider from '../providers/HashProvider/models/IHashProvider';
